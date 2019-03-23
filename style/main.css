@@ -1,82 +1,308 @@
 /*Шапка*/
 header {
-    height: 125px;
+    height: 132px;
     border: 1px solid lightgray;
 }
-
 /*Стили верхнего уровня шапки*/
 .up_sub_header {
     border-bottom: 1px solid lightgray;
     padding-top: 5px;
-    min-height: 50%;
+    height: 54%;
     display: flex;
     align-items: center;
-    padding-left: 10px;
+    padding-left: 15px;
 }
-.search_block {
+.up_sub_header_wrapper {
     width: 100%;
     height: 100%;
-    padding-right: 30px;
+    padding-right: 28px;
+    display: flex;
+    align-items: center;
+}
+.search_block {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
 }
 .up_header_search_input {
-    height: 25px;
-    min-width: 37%;
+    height: 28px;
+    min-width: 39%;
     margin-top: -5px;
-    margin-left: 10px;
     padding-left: 10px;
     border: 1px solid lightgray;
     float: left;
+    border-radius: 2px 0 0 2px;
 }
 .up_header_search_input::placeholder {
     color: #acacac;
+    font-family: "Segoe UI", serif;
+    font-size: 14px;
 }
 .search_btn {
-    height: 29px;
+    height: 32px;
     margin-top: -5px;
     background-color: white;
     border: 1px solid lightgray;
     border-left: none;
     float: left;
     font-weight: bold;
-    padding: 0 10px;
+    padding: 2px 14px 4px;
+    border-radius: 0 2px 2px 0;
+    font-family: "Segoe UI", serif;
+    font-size: 14px;
 }
 .user_avatar {
     background-color: black;
     border-radius: 50%;
-    height: 34px;
-    width: 34px;
+    height: 40px;
+    width: 40px;
     margin-top: -5px;
-    float: right;
 }
-
 /*Стили нижнего уровня шапки*/
 .down_sub_header {
-    height: 50%;
+    height: 42%;
 }
 .down_sub_header nav {
     height: 100%;
     display: flex;
     align-items: center;
-    padding-left: 16.5%;/*222px*/
+    padding-left: 18.2%;/*222px*/
 }
 nav > a {
     margin-right: 3.5%;
     color: #5b5b5b;
     text-decoration: none;
-    padding: 15.5px 0;
+    padding: 19px 0;
+    font-family: "Segoe UI", serif;
+    font-size: 13px;
 }
 nav > a:hover {
     border-bottom: 2px solid #212121;
-    padding-bottom: 14px;
+    padding-bottom: 17px;
 }
 
+/*Контент*/
 /*Стили контента*/
 main {
     border: 1px solid lightgray;
     border-bottom: none;
     border-top: none;
 }
-.content_wrapper h1 {
+.content_wrapper {
+    padding-top: 20px;
+    margin-left: 18%;
+}
+/*Название организации*/
+.organization_name {
+    display: flex;
+    align-items: center;
+}
+.organization_name h1 {
     margin: 0;
     padding: 0;
+    font-family: "Segoe UI", serif;
+    font-weight: 600;
+    margin-right: 15px;
+}
+.organization_name i {
+    font-size: 12px;
+    margin-top: 14px;
+}
+.organization_name a {
+    text-decoration: none;
+    font-family: "Segoe UI", serif;
+    font-size: 14px;
+    margin-top: 14px;
+    margin-left: 5px;
+}
+/*Информация об организации*/
+.organization_info {
+    display: flex;
+    align-items: center;
+    margin-top: 28px;
+    font-family: "Segoe UI", serif;
+    font-size: 14px;
+}
+.organization_info a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 15px;
+    border: 1px solid lightgray;
+}
+.organization_info a:nth-child(even) {
+    border-left: none;
+    border-right: none;
+}
+.organization_info a:first-child {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.organization_info a:last-child {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.organization_info a:hover {
+    background-color: #ffeb9a;
+}
+/*Количество отзывов об организации*/
+.organization_reviews {
+    font-family: "Segoe UI", serif;
+}
+.reviews_count {
+    display: flex;
+    align-items: center;
+
+}
+.reviews_count h2 {
+    font-weight: 500;
+}
+.reviews_count .organization_rating {
+    margin-top: 5px;
+    margin-left: 15px;
+    padding: 1px 5px;
+    background-color: #fac900;
+    color: #9c6f00;
+}
+.reviews_count:after {
+    content:"";
+    margin-top: 5px;
+    display: inline-block;
+    border: 11.5px solid transparent;
+    border-left: 8px solid #fac900;
+}
+/*Отзывы*/
+article {
+    max-width: 433px;
+    margin-top: 30px;
+}
+article:first-child {
+    margin-top: 0;
+}
+/*Главная информация отзыва*/
+article .main_comment_info {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.main_comment_info .comment_user_avatar {
+    height: 32px;
+    width: 32px;
+    background-color: black;
+    border-radius: 50%;
+}
+.main_comment_info span {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.main_comment_info .list-item {
+    font-size: 12px;
+    color: #acacac;
+}
+.main_comment_info .list-item:before {
+    content: "·";
+    margin-right: 5px;
+}
+.main_comment_info i {
+    font-size: 20px;
+    margin-top: -5px;
+    margin-left: 5px;
+    color: #89753e;
+}
+/*Текстовая часть отзыва*/
+article .comment_message {
+    margin-top: -10px;
+}
+article .comment_message p {
+    font-size: 14px;
+}
+article .comment_message .comment_message_more {
+    text-decoration: none;
+    color: #807f87;
+    font-size: 14px;
+}
+article .comment_message .comment_message_more:before {
+    content: "\00a0\00a0";
+}
+/*Действия с отзывами*/
+article .comment_actions {
+    display: flex;
+    align-items: center;
+}
+article .comment_actions button {
+    padding: 4px 8px;
+    background-color: #fefefe;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    margin-right: 20px;
+}
+article .comment_actions button:focus {
+    background-color: #fae5a1;
+    outline: none;
+}
+article .comment_actions a {
+    text-decoration: none;
+    color: #807f87;
+    font-size: 14px;
+}
+/*Ответ пользователя на отзыв*/
+.response_to_comment {
+    max-width: 430px;
+    display: flex;
+    flex-direction: column;
+}
+.response_to_comment label {
+    display: block;
+    margin: 10px 0;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.response_to_comment .response_input {
+    position: relative;
+}
+.response_to_comment .response_input textarea {
+    height: 100px;
+    width: 98.5%;
+    resize: none;
+}
+.response_to_comment .response_input button {
+    position: absolute;
+    top: 5px;
+    left: calc(96% - 10px);
+    background-color: transparent;
+    border: none;
+}
+.response_to_comment .response_input button:focus {
+    outline: none;
+}
+.response_to_comment .response_input button i {
+    font-size: 20px;
+}
+.response_to_comment .publish_response {
+    align-self: flex-end;
+    padding: 5px 22px;
+    background-color: #ededed;
+    border: none;
+    border-radius: 2px;
+    margin-top: 5px;
+    color: #979797;
+}
+/*Кнопка, для показа всех отзывов*/
+.show_all_reviews {
+    width: 430px;
+    padding: 9px 0;
+    border: none;
+    border-radius: 2px;
+    margin-top: 20px;
+    background-color: #ededed;
+    font-weight: bold;
+}
+
+/*Футер*/
+footer {
+    height: 50px;
+    border: 1px solid lightgray;
+    border-top: none;
 }
